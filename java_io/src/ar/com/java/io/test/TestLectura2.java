@@ -9,8 +9,10 @@ import java.util.Scanner;
 
 public class TestLectura2 {
 
-	public static void main(String[] args) throws FileNotFoundException {
-		Scanner scanner = new Scanner(new File("archivo.csv"));
+	public static void main(String[] args) throws IOException {
+		
+		// Scanner scanner = new Scanner(new File("archivo.csv"), StandardCharsets.UTF_8);
+		Scanner scanner = new Scanner(new File("cuentas.csv"), StandardCharsets.UTF_8);
 		String linea;
 		while (scanner.hasNextLine() && (linea = scanner.nextLine()) != null) {
 			/*			
@@ -26,7 +28,9 @@ public class TestLectura2 {
 			System.out.println(Arrays.asList(lineas));			
 			System.out.println(String.format("%s,%s,%s,%s,%s", lineas));
 			System.out.println(lineas[1]);
-						
+			
+			
+			
 			/*
 			// Usando Scanner
 						
